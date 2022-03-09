@@ -10,13 +10,11 @@ public class Main {
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(2);
 
-        }
-        Arrays.sort(array);
-        System.out.println("Sorted array: ");
-        for (int a : array) {
-            System.out.print(a + " ");
 
         }
+
+        System.out.println("Sorted array: ");
+        sortedArray(array);
         System.out.println();
         ArrayList<Integer> arrayList = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
@@ -38,20 +36,33 @@ public class Main {
 
     }
 
-    public static void printElementsOfArray(List<Integer> a) {
-        for (Integer i : a) {
-            System.out.print(i + " ");
+
+    public static void sortedArray(ArrayList<Integer> arrayList) {
+
+        Collections.sort(arrayList);
+
+
+        System.out.println(arrayList);
+    }
+    public static void sortedArray(LinkedList<Integer> linkedList) {
+
+        Collections.sort(linkedList);
+
+
+        System.out.println(linkedList);
+    }
+    public static void sortedArray(int[]array) {
+
+        Arrays.sort(array);
+        for (int a : array) {
+            System.out.print(a + " ");
 
         }
+
+
+
     }
 
-    public static List<Integer> sortedArray(List<Integer> list) {
-
-        Collections.sort(list);
-
-        printElementsOfArray(list);
-        return list;
-    }
 
 }
 
